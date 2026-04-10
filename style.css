@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+.card {
+    width: 200px;
+    height: 120px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    font-weight: bold;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+/* CV popup */
+#cvPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    max-width: 90%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+#cvPopup h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+#overlay {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 900;
+}
+#cvPopup p {
+    margin: 8px 0;
+    color: #555;
+}
+
+#cvPopup hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+#cvPopup button {
+    /*margin-top: 15px;*/
+    /*padding: 10px 15px;*/
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#cvPopup button:hover {
+    background: #0056b3;
+}
+
+#closeBtn {
+    margin-top: 20px;
+    padding: 8px 12px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#fullScreenBtn {
+    position:absolute; 
+    top:10px; 
+    left:15px; 
+    background:#28a745; 
+    color:white; 
+    border:none; 
+    padding:5px 10px; 
+    border-radius:5px; 
+    cursor:pointer; 
+    z-index:1001;
+} 

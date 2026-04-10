@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card" id="card1">Project 1: CV</div>
+<div class="card" id="card2">Project 2: </div>
+<div class="card" id="card3">Project 3: </div>
+<div class="card" id="card4">Project 4: </div>
+
+<!-- CV Popup -->
+<div id="overlay"></div>
+<div id="cvPopup">
+    <div id="cvSummary" style="padding: 20px;">
+    <h2>Your Name</h2>
+    <p><strong>Position:</strong> Frontend Developer</p>
+    <p><strong>Email:</strong> example@gmail.com</p>
+    <p><strong>Summary:</strong> I have experience in web development and UI/UX.</p>
+    </div>
+    <button id="closeBtn">Close</button>
+<!--    <button id="downloadBtn">PDF İndir</button>-->
+    <button id="fullScreenBtn">Full Screen</button>
+    <iframe src="cv.html"></iframe>
+</div>
+
+<script>
+    const card1 = document.getElementById('card1');
+    const cvPopup = document.getElementById('cvPopup');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('closeBtn');
+    const fullScreenBtn = document.getElementById('fullScreenBtn');
+    
+
+    card1.addEventListener('click', () => {
+        cvPopup.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        cvPopup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+        cvPopup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    fullScreenBtn.addEventListener('click', () => {
+        // Yeni sekmede cv.html aç
+        window.open('cv.html', '_blank');
+    });
+
+    // downloadBtn.addEventListener('click', () => {
+    //     const { jsPDF } = window.jspdf;
+    //     const doc = new jsPDF();
+    //
+    //     doc.setFontSize(22);
+    //     doc.text("Ad Soyad", 20, 20);
+    //     doc.setFontSize(14);
+    //     doc.text("Pozisyon: Frontend Developer", 20, 35);
+    //     doc.text("Email: example@email.com", 20, 45);
+    //     doc.text("Özet: Web geliştirme, UI/UX ve modern JavaScript frameworklerinde deneyimliyim.", 20, 60);
+    //     doc.text("Deneyimler:", 20, 75);
+    //     doc.text("- Şirket A - Frontend Developer (2022-2023)", 25, 85);
+    //     doc.text("- Şirket B - Stajyer (2021)", 25, 95);
+    //     doc.text("Eğitim: Bilgisayar Mühendisliği, XYZ Üniversitesi", 20, 110);
+    //
+    //     doc.save("CV_AdSoyad.pdf");
+    // });
+
+    
+</script>
+
+</body>
+</html>

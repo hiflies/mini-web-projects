@@ -1,0 +1,143 @@
+:root {
+    --font-size-small: 10px;
+    /*TODO font size*/
+}
+/*TODO h2, p , li*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+
+    ul {
+        padding-left: 12px;
+    }
+}
+
+.cv-left-section {
+    background: #222933;
+    color: white;
+    padding: 30px;
+    flex: 1;
+    font-size: 10px;
+
+    h2 {
+        margin: 10px 0 5px;
+        font-size: 16px;
+    }
+
+    ul {
+        list-style-type: circle;
+    }
+
+    li {
+        font-size: var(--font-size-small);
+        padding: 2px;
+    }
+
+    .cv-sum-section {
+        margin-bottom: 40px;
+
+        i {
+            color: #6795c0;
+            font-size: 12px;
+        }
+
+        .cv-contact {
+            div {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .profile {
+        text-align: center;
+
+        img {
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 18px;
+        }
+
+        p {
+            color: #6795c0;
+            font-size: 12px;
+        }
+    }
+
+    .cv-languages > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.cv-right-section {
+    flex: 3;
+    padding:30px 50px 0 30px;
+
+    .cv-main-section {
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 18px;
+            color: #222933;
+            padding-bottom: 10px;
+        }
+
+        p, li {
+            font-size: 12px;
+            line-height: 1.5;
+            margin: 5px 0;
+        }
+
+        .cv-experience {
+            margin-top: 20px;
+
+            .sub-heading {
+
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+            .date-and-details {
+                font-size: 12px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .cv-education > div {
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+    .cv-container {
+        margin: 0;
+    }
+
+    .cv-left-section .profile img {
+        width: 80px /*!important*/;
+        height: 80px /*!important*/;
+    }
+
+}
