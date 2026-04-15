@@ -1,0 +1,168 @@
+:root {
+    --color-primary: #D4AF37;
+    --color-secondary: #FDF5E6;
+    --color-tertiary: #E6A8D7;
+    --color-font: #FF9CA1FF;
+    --color-neutral: #FFF9F0;
+    --color-buttons: #47D1BAFF;
+    --font-headline: "Agbalumo";
+    --font-body: "Space Mono";
+    --font-label: "Muli";
+}
+
+body {
+    margin: 0;
+    /*font-family: Arial, sans-serif;*/
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+}
+
+main {
+    /*background-color: var(--color-primary);*/
+    padding-top: 50px;
+    min-height: calc(100vh - 149px);
+}
+
+.home h1 {
+    font-family: var(--font-headline), serif;
+    color: var(--color-font);
+}
+
+header, footer {
+    background: var(--color-buttons);
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.home {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-left-section {
+    flex: 3;
+
+    background-image: url('photos/main.jpg');
+    background-color: transparent;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+.main-right-section {
+    flex: 2;
+    height: auto;
+    text-align: center;
+    margin: auto 0;
+    padding: 40px;
+}
+
+#main-logo {
+    width: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--color-neutral);
+    padding: 3px;
+}
+
+main.products-page{
+    padding: 50px 20px 20px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+
+}
+
+.product, .contact-us, .about-section {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-neutral);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.about-section{
+    /*height: 100%;*/
+    min-height: calc(100vh - 171px);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    .group{
+        flex: 1;
+    }
+}
+
+.product{
+    padding: 0 0 10px 0;
+    overflow: hidden;
+    img {
+        /*border-radius: 3px;*/
+        /*width: 150px;*/
+        /*height: auto;*/
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+.add-to-cart {
+    /*justify-content: flex-end;*/
+    /*margin-bottom: 0;*/
+    padding: 5px;
+    border-radius: 3px;
+    width: 100%;
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+    border-width: 0;
+}
+
+.add-to-cart:hover {
+
+    background-color: var(--color-buttons);
+    -webkit-appearance: button;
+}
+
+#contact-us-form {
+    text-align: center;
+}
+
+.submit {
+    background-color: var(--color-neutral);
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .main-left-section {
+        /*max-height: 50vh;*/
+        overflow: hidden;
+    }
+
+    #main-logo {
+        width: 30%;
+        margin-top: -80px;
+    }
+
+}
