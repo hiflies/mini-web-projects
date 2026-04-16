@@ -5,13 +5,20 @@
     --color-font: #FF9CA1FF;
     --color-neutral: #FFF9F0;
     --color-buttons: #47D1BAFF;
-    --font-headline: "Agbalumo";
     --font-body: "Space Mono";
     --font-label: "Muli";
 }
 
+* {
+    font-family: var(--font-label), serif;
+}
+
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-neutral);
     /*font-family: Arial, sans-serif;*/
 }
 
@@ -25,17 +32,29 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    min-height: 44px;
 }
 
 main {
     /*background-color: var(--color-primary);*/
     padding-top: 64px;
-    min-height: calc(100vh - 122px);
+    flex: 1;
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 84px 30px 30px;
 }
 
 .home h1 {
-    font-family: var(--font-headline), serif;
     color: var(--color-font);
 }
 
@@ -52,14 +71,12 @@ footer {
 }
 
 .footer-copy {
-    font-family: var(--font-label), sans-serif;
     color: white;
     font-size: 13px;
     margin: 0;
 }
 
 nav a {
-    font-family: var(--font-label), sans-serif;
     color: white;
     text-decoration: none;
     padding: 6px 14px;
@@ -77,6 +94,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
 }
 
 .nav-logo {
@@ -88,7 +106,6 @@ nav a:hover {
 }
 
 .nav-title {
-    font-family: var(--font-headline), serif;
     color: white;
     font-size: 20px;
     letter-spacing: 0.5px;
@@ -102,7 +119,7 @@ nav {
 .home {
     display: flex;
     width: 100%;
-    height: 100vh;
+    flex: 1;
 }
 
 .main-left-section {
@@ -122,6 +139,10 @@ nav {
     text-align: center;
     margin: auto 0;
     padding: 40px;
+
+    p {
+        font-family: var(--font-body), serif;
+    }
 }
 
 #main-logo {
@@ -132,7 +153,7 @@ nav {
     padding: 3px;
 }
 
-main.products-page{
+main.products-page {
     padding: 50px 20px 20px;
 }
 
@@ -143,7 +164,7 @@ main.products-page{
 
 }
 
-.product, .contact-us, .about-section {
+.product, .contact-us, .about-card {
     background-color: var(--color-secondary);
     border: 1px solid var(--color-neutral);
     border-radius: 10px;
@@ -151,21 +172,67 @@ main.products-page{
     text-align: center;
 }
 
-.about-section{
-    /*height: 100%;*/
-    min-height: calc(100vh - 144px);
+.about-card {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    .group{
-        flex: 1;
-    }
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 800px;
+    width: 100%;
+    padding: 25px;
 }
 
-.product{
+.about-founder {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 160px;
+}
+
+.founder-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-buttons);
+}
+
+.founder-name {
+    color: var(--color-font);
+    margin: 14px 0 4px;
+    font-size: 16px;
+}
+
+.founder-title {
+    font-family: var(--font-body), serif;
+    font-size: 13px;
+    color: #888;
+    margin: 0;
+}
+
+.about-story {
+    flex: 2;
+    text-align: left;
+}
+
+.about-story h1 {
+    color: var(--color-font);
+    margin: 0 0 16px;
+}
+
+.about-story p {
+    font-family: var(--font-body), serif;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0 0 14px;
+    color: #444;
+}
+
+.product {
     padding: 0 0 10px 0;
     overflow: hidden;
+
     img {
         /*border-radius: 3px;*/
         /*width: 150px;*/
@@ -194,12 +261,133 @@ main.products-page{
     -webkit-appearance: button;
 }
 
-#contact-us-form {
+main.contact-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 84px 30px 30px;
+    background-color: var(--color-neutral);
+    .fa {
+        color: var(--color-buttons);
+    }
+}
+
+.contact-us {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 800px;
+    width: 100%;
+    padding: 25px;
+}
+
+.contact-form-section {
+    flex: 2;
+    margin-right: 25px;
+}
+
+.contact-form-section h1 {
+    color: var(--color-font);
+    margin: 0 0 20px;
+}
+
+.contact-information {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-information h2 {
+    color: var(--color-font);
+    margin: 0 0 16px;
+}
+
+.contact-information p {
+    font-family: var(--font-body), serif;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.contact-information a {
+    color: var(--color-font);
+    text-decoration: none;
+}
+
+.contact-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.contact-socials a {
+    font-size: 13px;
+    background-color: var(--color-buttons);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
     text-align: center;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.contact-socials a:hover {
+    opacity: 0.85;
+}
+
+#contact-us-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 13px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: var(--font-body), serif;
+    font-size: 13px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-buttons);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
 .submit {
-    background-color: var(--color-neutral);
+    font-size: 14px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-buttons);
+    color: white;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: opacity 0.2s ease;
+}
+
+.submit:hover {
+    opacity: 0.85;
 }
 
 @media (max-width: 768px) {
@@ -218,13 +406,24 @@ main.products-page{
         margin-top: -80px;
     }
 
+    .contact-us, .about-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-story {
+        text-align: center;
+    }
+
+
+
     footer {
         flex-direction: column;
         gap: 10px;
         text-align: center;
     }
 
-    .nav-brand > *{
+    .nav-brand > * {
         display: none;
     }
 }

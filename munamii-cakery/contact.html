@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <title>Title</title>
+    <title>Munamii Cakery</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono|Muli">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <div class="nav-brand">
+    <a class="nav-brand" href="index.html">
         <img src="photos/munamii-logo.png" alt="Munamii Cakery Logo" class="nav-logo">
         <span class="nav-title">Munamii Cakery</span>
-    </div>
+    </a>
     <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
@@ -19,19 +21,35 @@
         <a href="contact.html">Contact</a>
     </nav>
 </header>
-<main>
-    <h1>Contact Us</h1>
-
+<main class="contact-page">
     <div class="contact-us">
-        <form id="contact-us-form">
-            <input type="text" placeholder="Your Name"><br>
-            <input type="email" placeholder="Your Email"><br>
-            <textarea placeholder="Your Message"></textarea><br>
-            <button type="submit" class="submit">Send</button>
-        </form>
+        <div class="contact-form-section">
+            <h1>Get in Touch</h1>
+            <form id="contact-us-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your order or event..."></textarea>
+                </div>
+                <button type="submit" class="submit">Send Message</button>
+            </form>
+        </div>
         <div class="contact-information">
-            <p>Email: your@email.com</p>
-            <p>Phone: +00 1515151515</p>
+            <h2>Contact Info</h2>
+            <p><i class="fa fa-envelope"></i> <a href="mailto:your@email.com">your@email.com</a></p>
+            <p><i class="fa fa-phone"></i> +46 1515151515</p>
+            <p>Follow us on social media for our latest cakes and updates!</p>
+            <div class="contact-socials">
+                <a href="https://www.instagram.com/munamii.cakery" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/munamiicupcakes" target="_blank">Facebook</a>
+            </div>
         </div>
     </div>
 </main>
