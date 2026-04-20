@@ -3,88 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mini</title>
+    <meta http-equiv="Refresh" content="0; url=https://halime.tr">
 </head>
 <body>
-
-<div class="card" data-popup="#cvPopup">Project 1: CV</div>
-<div class="card" data-popup="#cakeryPopup">Project 2: Cakery Website</div>
-<div class="card" data-popup="#honeybeePopup">Project 3: Honeybee Cakes</div>
-<div class="card">Project 4:</div>
-
-<!-- CV Popup -->
-<div id="overlay"></div>
-<div id="cvPopup" class="popup">
-    <div style="padding: 20px;">
-        <h2>Your Name</h2>
-        <p><strong>Position:</strong> Frontend Developer</p>
-        <p><strong>Email:</strong> example@gmail.com</p>
-        <p><strong>Summary:</strong> I have experience in web development and UI/UX.</p>
-    </div>
-    <button class="closeBtn">Close</button>
-    <button class="fullScreenBtn">Full Screen</button>
-    <iframe src="cv/"></iframe>
-</div>
-
-<!-- Cakery Popup -->
-<div id="cakeryPopup" class="popup">
-    <div style="padding: 20px;">
-        <h2>Munamii Cakery</h2>
-        <p><strong>Sweet beginnings start here.</strong></p>
-        <p><strong>Email:</strong> munamii@halime.tr</p>
-        <p>Munamii Cakery — Malmö, Sweden</p>
-    </div>
-    <button class="closeBtn">Close</button>
-    <button class="fullScreenBtn">Full Screen</button>
-    <iframe src="munamii-cakery/"></iframe>
-</div>
-
-<!-- Honeybee Popup (react)-->
-<div id="honeybeePopup" class="popup">
-    <div style="padding: 20px;">
-        <h2>Honeybee Cakes</h2>
-        <p><strong>Sweet beginnings start here.</strong></p>
-        <p><strong>Email:</strong> honeybee@halime.tr</p>
-        <p>Honeybee Cakes — Malmö, Sweden</p>
-    </div>
-    <button class="closeBtn">Close</button>
-    <button class="fullScreenBtn">Full Screen</button>
-    <iframe src="honeybee-cakes/"></iframe>
-</div>
-
-<script>
-    const cards = document.querySelectorAll('.card[data-popup]');
-    const overlay = document.getElementById('overlay');
-    for (const card of cards) {
-        const cardPopup = document.querySelector(card.dataset.popup);
-        const closeBtn = cardPopup.querySelector('.closeBtn');
-        const fullScreenBtn = cardPopup.querySelector('.fullScreenBtn');
-        const iframe = cardPopup.querySelector('iframe');
-
-        card.addEventListener('click', () => {
-            cardPopup.style.display = 'block';
-            overlay.style.display = 'block';
-        })
-
-        closeBtn.addEventListener('click', () => {
-            cardPopup.style.display = 'none';
-            overlay.style.display = 'none';
-        });
-
-        fullScreenBtn.addEventListener('click', () => {
-            window.open(iframe.getAttribute("src"), '_blank');
-        });
-    }
-
-    overlay.addEventListener('click', () => {
-        const popups = document.getElementsByClassName("popup");
-        for (const popup of popups) {
-            popup.style.display = 'none';
-        }
-        overlay.style.display = 'none';
-    });
-</script>
-
+Redirecting...
 </body>
 </html>
