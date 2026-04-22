@@ -36,6 +36,7 @@ export default function Products() {
                             <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">Light Madagascar vanilla
                                 sponge with velvet buttercream and honeycomb bits.</p>
                             <button
+                                onClick={() => alert('Work in progress')}
                                 className="w-full py-4 border-b border-primary/20 text-primary font-bold hover:bg-primary-container/20 transition-colors flex items-center justify-center gap-2">
                                 Add To Cart
                                 <span className="material-symbols-outlined text-xl">shopping_bag</span>
@@ -58,6 +59,7 @@ export default function Products() {
                             <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">70% dark Belgian cocoa
                                 sponge with a silky ganache core and sea salt flake.</p>
                             <button
+                                onClick={() => alert('Work in progress')}
                                 className="w-full py-4 border-b border-primary/20 text-primary font-bold hover:bg-primary-container/20 transition-colors flex items-center justify-center gap-2">
                                 Add To Cart
                                 <span className="material-symbols-outlined text-xl">shopping_bag</span>
@@ -80,6 +82,7 @@ export default function Products() {
                             <p className="text-on-surface-variant text-sm mb-6 line-clamp-2">Floral notes of wild
                                 lavender infused into our signature honey sponge cake.</p>
                             <button
+                                onClick={() => alert('Work in progress')}
                                 className="w-full py-4 border-b border-primary/20 text-primary font-bold hover:bg-primary-container/20 transition-colors flex items-center justify-center gap-2">
                                 Add To Cart
                                 <span className="material-symbols-outlined text-xl">shopping_bag</span>
@@ -113,6 +116,7 @@ export default function Products() {
                             <div className="flex items-center justify-between mt-auto">
                                 <span className="font-headline text-2xl text-primary font-bold">1200 SEK</span>
                                 <button
+                                    onClick={() => alert('Work in progress')}
                                     className="honey-gradient text-on-primary px-6 py-3 rounded-full font-bold shadow-lg flex items-center gap-2 hover:brightness-110">
                                     Add To Cart
                                     <span className="material-symbols-outlined">add_shopping_cart</span>
@@ -137,6 +141,7 @@ export default function Products() {
                             <div className="flex items-center justify-between mt-auto">
                                 <span className="font-headline text-2xl text-primary font-bold">1500 SEK</span>
                                 <button
+                                    onClick={() => alert('Work in progress')}
                                     className="honey-gradient text-on-primary px-6 py-3 rounded-full font-bold shadow-lg flex items-center gap-2 hover:brightness-110">
                                     Add To Cart
                                     <span className="material-symbols-outlined">add_shopping_cart</span>

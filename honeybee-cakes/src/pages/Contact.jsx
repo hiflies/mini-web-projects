@@ -3,8 +3,9 @@ export default function Contact() {
         <main className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
             <header className="mb-16 text-center md:text-left">
                 <span className="text-tertiary font-label uppercase tracking-widest text-sm mb-4 block">Reach Us</span>
-                <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-background leading-tight">Contact Us
-                    </h1>
+                <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-background leading-tight">Contact
+                    Us
+                </h1>
                 <p className="mt-6 text-on-surface-variant max-w-2xl text-lg leading-relaxed">
                     Whether it's a dream wedding cake or a sweet treat for your afternoon tea, we're here to bring your
                     vision to life.
@@ -41,7 +42,8 @@ export default function Contact() {
                         </div>
                         <button
                             className="honey-gradient w-full md:w-auto px-10 py-4 rounded-xl text-on-primary font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-lg"
-                            type="submit">
+                            type="submit"
+                            onClick={() => alert('Work in progress')}>
                             Send Message
                         </button>
                     </form>
@@ -84,10 +86,17 @@ export default function Contact() {
                         <div className="mt-8 flex gap-4">
                             <div
                                 className="flex-1 h-32 rounded-lg overflow-hidden bg-surface-container-highest grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer">
-                                <img className="w-full h-full object-cover"
-                                     data-alt="minimalist aesthetic map of an urban neighborhood with soft beige and gold color scheme"
-                                     data-location="Istanbul"
-                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZM-GEfGZbDZYYm975u9r8ve0v4HMxNiGdaBcNONPxo7Yt5Y2HNWB4KOb3RZRRUQxhIcl7n6lGzpcPVGyFFv_GcISQAFTTyJwFFHVxFjM-tASwocycRi5wE_ig9kBuu-es-xNsvnufL0ZTmFsQoocavLodUt39o9cyY831Ldl4Z0pf4Y2hovQFjcnnM-SqSttdB-NI0W0gNiRsEF8aDK8Mw3xWIocsX-U9PwYjsOp_O1lPuCHv_sTwrhZeuYpBICdVBaHLZJCBJpbC"/>
+                                <img
+                                    className="w-full h-full object-cover"
+                                    data-alt="minimalist aesthetic map of an urban neighborhood with soft beige and gold color scheme"
+                                    data-location="Malmö"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZM-GEfGZbDZYYm975u9r8ve0v4HMxNiGdaBcNONPxo7Yt5Y2HNWB4KOb3RZRRUQxhIcl7n6lGzpcPVGyFFv_GcISQAFTTyJwFFHVxFjM-tASwocycRi5wE_ig9kBuu-es-xNsvnufL0ZTmFsQoocavLodUt39o9cyY831Ldl4Z0pf4Y2hovQFjcnnM-SqSttdB-NI0W0gNiRsEF8aDK8Mw3xWIocsX-U9PwYjsOp_O1lPuCHv_sTwrhZeuYpBICdVBaHLZJCBJpbC"
+                                    onClick={() => window.open(
+                                        'https://www.google.com/maps/place/Oxiev%C3%A5ngsv%C3%A4gen+97,+238+40+Oxie/@55.5377298,13.0961426,16.98z/data=!4m6!3m5!1s0x46539f866f72ebe9:0x2e2b00335c69a703!8m2!3d55.5377304!4d13.0987611!16s%2Fg%2F11c5dnzfhz?entry=ttu&g_ep=EgoyMDI2MDQxOS4wIKXMDSoASAFQAw%3D%3D',
+                                        '_blank'
+                                    )}
+                                />
+                                />
                             </div>
                         </div>
                     </div>
@@ -114,7 +123,8 @@ export default function Contact() {
                         <div className="flex items-center gap-4">
                             <span className="material-symbols-outlined text-primary"
                                   data-icon="schedule">schedule</span>
-                            <span className="font-medium">Tue - Sat: 10:00 AM - 7:00 PM</span>
+                            <span className="font-medium">Mon - Fri : 10:00 AM - 7:00 PM</span>
+                            <span className="font-medium">Sat : 10:00 AM - 4:00 PM</span>
                         </div>
                         <div className="flex items-center gap-4">
                             <span className="material-symbols-outlined text-primary"
