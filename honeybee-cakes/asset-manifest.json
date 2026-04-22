@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/honeybee-cakes/static/css/main.bc267e10.css",
+    "main.js": "/honeybee-cakes/static/js/main.5dc3e173.js",
+    "index.html": "/honeybee-cakes/index.html",
+    "main.bc267e10.css.map": "/honeybee-cakes/static/css/main.bc267e10.css.map",
+    "main.5dc3e173.js.map": "/honeybee-cakes/static/js/main.5dc3e173.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc267e10.css",
+    "static/js/main.5dc3e173.js"
+  ]
+}
